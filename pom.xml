@@ -5,15 +5,15 @@
 
     <groupId>com.czachodym</groupId>
     <artifactId>BotC-shared</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <packaging>jar</packaging>
 
     <name>BotC shared</name>
 
     <properties>
-        <maven.compiler.source>24</maven.compiler.source>
-        <maven.compiler.target>24</maven.compiler.target>
-        <java.version>24</java.version>
+        <maven.compiler.source>25</maven.compiler.source>
+        <maven.compiler.target>25</maven.compiler.target>
+        <java.version>25</java.version>
         <lombok.version>1.18.38</lombok.version>
         <JDA.version>5.5.1</JDA.version>
     </properties>
