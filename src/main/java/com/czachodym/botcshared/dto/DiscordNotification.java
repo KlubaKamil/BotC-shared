@@ -1,6 +1,7 @@
 package com.czachodym.botcshared.dto;
 
 import lombok.Builder;
+import org.springframework.core.io.Resource;
 
 import java.util.List;
 
@@ -9,6 +10,8 @@ public record DiscordNotification(
         Long id,
         NotificationType notificationType,
         NotificationMode notificationMode,
-        List<DiscordNotifiedChannel> channelsToNotify,
-        String message)
+        DiscordRootDto discordRootDto,
+        List<String> channelsToNotify,
+        String message,
+        List<byte[]> resources)
 {}

@@ -5,10 +5,11 @@ import net.dv8tion.jda.api.entities.channel.ChannelType;
 
 import java.util.List;
 
-@Builder
-public record DiscordChannel(
-        String id,
+@Builder(toBuilder = true)
+public record DiscordChannelDto(
+        String discordChannelId,
         String name,
         ChannelType channelType,
-        List<DiscordThread> threads
+        boolean allowed,
+        List<DiscordThreadDto> threads
 ){}

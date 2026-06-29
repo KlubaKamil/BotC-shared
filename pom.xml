@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.czachodym</groupId>
-    <artifactId>BotC-shared</artifactId>
-    <version>1.1.0</version>
+    <artifactId>botc-shared</artifactId>
+    <version>1.2.0</version>
     <packaging>jar</packaging>
 
     <name>BotC shared</name>
@@ -16,6 +16,7 @@
         <java.version>25</java.version>
         <lombok.version>1.18.38</lombok.version>
         <JDA.version>5.5.1</JDA.version>
+        <spring-core.version>7.0.8</spring-core.version>
     </properties>
 
     <dependencies>
@@ -29,7 +30,13 @@
         <!--        <artifactId>jackson-datatype-jsr310</artifactId>-->
         <!--    </dependency>-->
 
-        <!-- Optional: Lombok -->
+        <!-- Source: https://mvnrepository.com/artifact/org.springframework/spring-core -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring-core.version}</version>
+            <scope>compile</scope>
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -61,4 +68,11 @@
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <url>http://192.168.1.19:30801/repository/botc-releases/</url>
+        </repository>
+    </distributionManagement>
 </project>
