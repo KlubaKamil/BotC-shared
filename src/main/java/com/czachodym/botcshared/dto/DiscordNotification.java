@@ -12,6 +12,5 @@ public record DiscordNotification(
         NotificationMode notificationMode,
         DiscordRootDto discordRootDto,
         List<String> channelsToNotify,
-        String message,
-        List<byte[]> resources)
+        String message)
 {}
